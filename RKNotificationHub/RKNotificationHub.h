@@ -65,6 +65,8 @@
 - (void)blink;
 - (void)bump;
 
+- (void)bringToFront;
+
 @property (nonatomic)UIView *hubView;
 
 @end

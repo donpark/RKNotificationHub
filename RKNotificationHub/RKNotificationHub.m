@@ -392,4 +392,11 @@ CGFloat kBumpTimeSeconds2 = 0.1;
     curOrderMagnitude = orderOfMagnitude;
 }
 
+- (void)bringToFront {
+    // move badge to front to workaround UIViews that change subview order
+    UIView *view = [redCircle superview];
+    [view bringSubviewToFront:redCircle];
+    [view bringSubviewToFront:countLabel];
+}
+
 @end
